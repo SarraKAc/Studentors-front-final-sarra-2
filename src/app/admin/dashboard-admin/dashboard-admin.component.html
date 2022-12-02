@@ -1,0 +1,45 @@
+
+
+
+
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <!-- <h1 class="h3 mb-2 text-gray-800">Tables</h1>
+    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
+        For more information about DataTables, please visit the <a target="_blank"
+            href="https://datatables.net">official DataTables documentation</a>.</p>  -->
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Liste des utilisateurs</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table "  width="100%" >
+                    <thead>
+                        <tr>
+                            <th> Image </th>
+                            <th>Nom</th>
+                            <th>Prenom</th>
+                            <th>Email</th>
+                            <th>Profession</th>
+                            <th>ville</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tr *ngFor="let u of users" >
+                        <td> <img class="img-profile rounded-circle"
+                            [src]="u.image"> </td>
+                        <td> {{u.nom}} </td>
+                        <td>{{u.prenom}}</td>
+                        <td>{{u.email}}</td>
+                        <td> {{u.profession}} </td>
+                        <td> {{u.ville}} </td>
+                        <td> <button (click)="onDelete(u.id)" class="btn btn-danger" >Supprimer</button>
+                            <button (click)="onDelete(u.id)" class="btn btn-primery" >Consulter</button> </td>
+                    </tr>
+                    </table>
+                    </div>
+                    </div>
